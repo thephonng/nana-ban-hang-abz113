@@ -1,5 +1,5 @@
 /* Nà Ná Na: ưu tiên bản mới từ mạng, mất mạng thì dùng bản đã lưu. Đổi số VERSION để ép làm mới. */
-var VERSION = 'nana-pos-v1';
+var VERSION = 'nana-pos-v2';
 var CORE = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(VERSION).then(function (c) { return c.addAll(CORE); }).then(function () { return self.skipWaiting(); }));
